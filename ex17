@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Chester — Ex17</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{--bg:#fffaf6;--card:#fff;--accent:#d9480f;--muted:#5b616a;--radius:12px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;color:#111;background:var(--bg)}
+    .top{
+      background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.12)), url('images/Chester.jpg') center/cover no-repeat;
+      height:260px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;padding:18px;border-bottom-left-radius:var(--radius);border-bottom-right-radius:var(--radius)
+    }
+    .top h1{font-size:36px;margin:0;letter-spacing:-1px}
+    .wrap{max-width:1000px;margin:22px auto;padding:0 18px}
+    .grid{display:grid;grid-template-columns:1fr 300px;gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+    .highlight{background:linear-gradient(90deg,#fff2e6,#fff5ed);padding:12px;border-radius:8px;margin-bottom:12px;color:#7a3b00}
+    .small-img{max-width:100%;border-radius:8px;display:block}
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;background:var(--accent);color:#fff}
+    footer{margin-top:14px;color:var(--muted)}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;padding-bottom:18px}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <h1>Chester — Entertainment & Events</h1>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card">
+        <div class="highlight">Sẵn sàng phục vụ các buổi tiệc, event công ty, sinh nhật.</div>
+
+        <h2>Dịch vụ & Giá cả</h2>
+        <p style="color:var(--muted)">
+          Chương trình 60/90 phút, trang trí, MC, và photo booth. Thông tin chi tiết bạn đặt ở đây theo yêu cầu của đề bài.
+        </p>
+
+        <h3>Thông tin thêm</h3>
+        <ul style="color:var(--muted)">
+          <li>Địa điểm: theo thỏa thuận</li>
+          <li>Liên hệ: email hoặc số điện thoại</li>
+          <li>Bảo đảm hài lòng</li>
+        </ul>
+
+        <p style="margin-top:10px">
+          <a class="cta" href="../ex16/Euler.html">...</a>
+          <a class="cta" href="../ex18/Resume.html" style="background:#0b63c7;margin-left:10px">Xem Resume</a>
+        </p>
+
+        <footer>
+          <p>File: <code>ex17/Chester.html</code></p>
+        </footer>
+      </section>
+
+      <aside class="card" aria-hidden="true">
+        <h3>Ảnh minh họa</h3>
+        <img src="images/Diamonds.jpg" alt="Decorative" class="small-img">
+        <p style="color:var(--muted);margin-top:8px">Ảnh: Diamonds.jpg (nằm trong ex17/images/)</p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
