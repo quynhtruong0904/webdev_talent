@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Resume — Ex18</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{--bg:#eef6ff;--card:#fff;--accent:#0b63c7;--muted:#4b5563;--radius:12px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:#111}
+    .shell{max-width:980px;margin:28px auto;padding:20px}
+    .top{display:flex;gap:16px;align-items:center;margin-bottom:16px}
+    .avatar{width:110px;height:110px;border-radius:12px;object-fit:cover;border:6px solid rgba(255,255,255,0.7);box-shadow:0 6px 20px rgba(11,99,199,0.06)}
+    .title h1{margin:0;font-size:22px}
+    .title p{margin:6px 0 0;color:var(--muted)}
+    nav{margin-top:10px}
+    .nav-btn{display:inline-block;padding:8px 12px;border-radius:10px;background:var(--card);margin-right:8px;text-decoration:none;color:var(--accent);border:1px solid rgba(11,99,199,0.08)}
+    .content{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    .primary{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .muted{background:#f3f6fb;padding:9px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+    footer{margin-top:12px;color:var(--muted);font-size:0.9rem}
+    @media (max-width:720px){
+      .top{flex-direction:column;align-items:flex-start}
+      .avatar{width:84px;height:84px}
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="top">
+      <img src="images/Taylor.jpg" alt="Mary Taylor" class="avatar">
+      <div class="title">
+        <h1>Mary Taylor</h1>
+        <p>Resume — Exercise 18</p>
+        <nav>
+          <a class="nav-btn" href="Refer.html">References</a>
+          <a class="nav-btn" href="Comments.html">Comments</a>
+          <a class="nav-btn" href="https://www.colostate.edu" target="_blank" rel="noopener">Colorado State</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="actions">
+        <a class="primary" href="../ex14/ex14.html" target="_self" title="Open ex14">Mở ex14 (Xem trang gốc)</a>
+      </div>
+
+      <section id="resume-area">
+        <h2>Tóm tắt</h2>
+        <p style="color:var(--muted)">Trang Resume (Exercise 18). Nhấn "Mở ex14" để điều hướng sang trang ex14 chứa nội dung gốc.</p>
+
+        <h3>Ghi chú ngắn</h3>
+        <ul style="color:var(--muted)">
+          <li>Đảm bảo file ex14 đặt tại <code>../ex14/ex14.html</code> so với vị trí này.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <p>File: <code>ex18/Resume.html</code></p>
+    </footer>
+  </div>
+</body>
+</html>
