@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>The Dunston Retreat Center — Exercise 26</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin:0; background:#fff; color:#111; }
+    .wrap { max-width:940px; margin:18px auto; padding:12px; }
+    table.outer { width:100%; border-collapse:collapse; border:1px solid #e6eef8; background:#fafafa; }
+    td { vertical-align:top; padding:10px; }
+    .left { width:220px; background:#f1f5f9; padding:12px; }
+    .left h3 { margin-top:0; color:#0b63c7; }
+    .banner img { width:100%; height:auto; display:block; border-radius:6px; }
+    .center-col { padding:14px; background:#fff; }
+    h1 { margin:0 0 6px 0; color:#0b63c7; font-size:20px; }
+    .threecol { display:flex; gap:10px; align-items:flex-start; margin-top:12px }
+    .col { flex:1; background:#f8fafc; padding:10px; border-radius:6px; border:1px solid #eef4ff }
+    .col img { width:100%; height:auto; border-radius:4px; display:block; margin-bottom:8px; }
+    a.readmore { color:#0b63c7; text-decoration:none; font-weight:600; }
+    .footer { text-align:center; padding:10px; color:#64748b; font-size:0.9em }
+    @media (max-width:720px){
+      .threecol { flex-direction:column }
+      .left { display:none }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <table class="outer">
+      <tr>
+        <td colspan="2" class="banner">
+          <img src="images/DLogo.jpg" alt="Dunston Retreat Center Logo">
+        </td>
+      </tr>
+
+      <tr>
+        <td class="left">
+          <h3>Welcome</h3>
+          <p>Retreat Center near the mountains. Quiet, restorative environment.</p>
+          <h3>Contact</h3>
+          <p>Phone: 0123-456-789</p>
+          <p>Email: info@example.com</p>
+        </td>
+
+        <td class="center-col">
+          <h1>The Dunston Retreat Center</h1>
+          <p style="color:#475569">Whether you are planning a retreat, seminar, or a private weekend getaway, Dunston provides comfortable lodging and room for reflection.</p>
+
+          <div class="threecol">
+            <div class="col">
+              <img src="images/Dunston.jpg" alt="Activity">
+              <h4>Upcoming Events</h4>
+              <ul>
+                <li>June 12: Mindfulness Workshop</li>
+                <li>June 18: Music & Meditation</li>
+              </ul>
+              <a class="readmore" href="#">More events »</a>
+            </div>
+
+            <div class="col">
+              <img src="images/Adams.jpg" alt="Guest Speaker">
+              <h4>Guest Letters</h4>
+              <p style="margin:0">"A peaceful stay — highly recommend for groups seeking focused time together."</p>
+              <a class="readmore" href="#">Read more »</a>
+            </div>
+
+            <div class="col">
+              <h4>Accommodations</h4>
+              <p style="margin:0">Single & double rooms, conference hall, garden walks, catering on request.</p>
+              <a class="readmore" href="#">Book now »</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="footer">© Dunston Retreat Center</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
