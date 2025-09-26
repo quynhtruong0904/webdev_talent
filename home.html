@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>Logo — Exercise 27</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; margin:18px; background:#fff}
+    table.outer{width:900px;max-width:100%;border-collapse:collapse;margin:0 auto;border:2px solid #333}
+    td{vertical-align:top}
+    .titlebar{background:#fff;padding:8px 12px;border-bottom:2px solid #333}
+    .menucell{width:200px;padding:12px;background:#f8f9fb;border-right:2px solid #ddd}
+    .menu-list{margin:0;padding:6px 8px;border:1px solid #333;background:#fff}
+    .menu-list a{display:block;color:#0b63c7;text-decoration:none;padding:4px 0}
+    .banner-cell{padding:12px;text-align:center;background:#ffffff}
+    .banner{max-width:100%;height:auto;border:3px solid #666;display:block;margin:8px auto;border-radius:4px}
+    .instructions{width:900px;max-width:100%;margin:12px auto;font-size:0.95rem;color:#333}
+    .small{font-size:0.9rem;color:#444}
+    .left-thumbs{display:flex;flex-direction:column;gap:8px}
+    .thumb img{width:72px;height:auto;border:2px solid #ddd;display:block;border-radius:4px}
+    footer {text-align:center;margin:12px auto;color:#666;font-size:0.9rem}
+    @media (max-width:760px){
+      .menucell{display:none}
+      table.outer{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <table class="outer" role="presentation">
+    <tr>
+      <td colspan="2" class="titlebar">
+        <table width="100%" role="presentation"><tr>
+          <td style="width:120px"><img src="images/LOGO.JPG" alt="Logo" style="max-width:110px;height:auto;display:block"></td>
+          <td>
+            <h2 style="margin:0">University of Colorado — The Colorado Experience</h2>
+            <div class="small">Faculty of Information Systems — Business Web Development</div>
+          </td>
+        </tr></table>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="menucell">
+        <div class="menu-list">
+          <strong>Links</strong>
+          <a href="#">Homepage.html</a>
+          <a href="#">Our Philosophy.html</a>
+          <a href="#">Climbing Lessons.html</a>
+          <a href="#">Petit Grepon.html</a>
+          <a href="#">Lumpy Ridge.html</a>
+          <a href="#">North Face.html</a>
+          <a href="#">Kiener's.html</a>
+          <a href="#">The Diamond.html</a>
+          <a href="#">Eldorado.html</a>
+        </div>
+
+        <div style="margin-top:12px">
+          <strong>Gallery</strong>
+          <div class="left-thumbs" style="margin-top:8px">
+            <div class="thumb"><img src="images/Grepon.jpg" alt="Grepon"></div>
+            <div class="thumb"><img src="images/Lumpy.jpg" alt="Lumpy Ridge"></div>
+            <div class="thumb"><img src="images/NFace.jpg" alt="North Face"></div>
+            <div class="thumb"><img src="images/Kieners.jpg" alt="Kieners"></div>
+          </div>
+        </div>
+      </td>
+
+      <td class="banner-cell">
+        <h3 style="margin-top:0">The Colorado Experience</h3>
+        <img src="images/TCE.jpg" alt="The Colorado Experience Banner" class="banner">
+        <p class="small">Welcome to the Colorado Experience — an illustrated introduction to the region and guided climbing experiences.</p>
+        <p class="small"><em>Featured:</em> <strong>Mountain views</strong>, guided tours, and instructional programs.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" style="padding:10px;background:#fafafa">
+        <table width="100%" role="presentation" style="border-collapse:collapse">
+          <tr>
+            <td style="padding:8px;width:50%">
+              <h4 style="margin:4px 0">Instructor Spotlight</h4>
+              <p class="small">Meet our lead instructor with years of experience guiding groups across the Rockies.</p>
+            </td>
+            <td style="padding:8px;width:50%;text-align:right">
+              <p class="small">Contact: info@example.edu • Phone: (123) 456-7890</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <div class="instructions">
+    <h4>Instructions:</h4>
+    <p class="small">Image files are in the folder <code>ex27/images/</code>. Use the images as background or inline as needed.</p>
+    <ul class="small">
+      <li>Wall2.jpg</li>
+      <li>Mountain.jpg</li>
+      <li>LOGO.JPG</li>
+      <li>Diamond.jpg</li>
+      <li>Grepon.jpg</li>
+      <li>TCE.jpg</li>
+      <li>Lumpy.jpg</li>
+      <li>NFace.jpg</li>
+      <li>Eldorado.jpg</li>
+      <li>Kieners.jpg</li>
+      <li>Philosph.jpg</li>
+      <li>Lessons.jpg</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Page: ex27 / Logo.html</p>
+  </footer>
+</body>
+</html>
