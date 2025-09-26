@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <title>The Gargoyle Collection — Exercise 25</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin:0; background:#f7fafc; color:#111; }
+    .outer { max-width:960px; margin:20px auto; padding:12px; }
+    table.main { width:100%; border-collapse:collapse; background:#ffffff; border:1px solid #cbd5e1; }
+    td { vertical-align:top; padding:10px; }
+    .leftcol { width:220px; background:#0b63c7; color:#fff; padding:12px; }
+    .leftcol a { color:#fff; text-decoration:none; display:block; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.05) }
+    .header { background:#e6f0ff; padding:14px; text-align:center; border-bottom:1px solid #cbd5e1; }
+    .banner { width:100%; max-height:180px; object-fit:cover; border-radius:6px; display:block; }
+    h1 { margin:8px 0 0 0; font-size:20px; color:#0b63c7 }
+    h2 { margin:6px 0 8px 0; font-size:16px; color:#0b3b82 }
+    .product { border:1px solid #e6eef8; padding:10px; border-radius:6px; background:#fbfdff; }
+    .product img { width:100%; height:auto; border-radius:4px; display:block; }
+    .small { font-size:0.95em; color:#475569; }
+    .rightcol { background:#fff; }
+    .footer { text-align:center; padding:10px; font-size:0.85em; color:#64748b; }
+    .btn { background:#0b63c7; color:white; padding:8px 10px; border-radius:6px; text-decoration:none; font-weight:700; display:inline-block; }
+    @media (max-width:720px){
+      .leftcol{display:none}
+      table.main, td { display:block; width:100% }
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <table class="main">
+      <tr>
+        <td colspan="2" class="header">
+          <img src="images/Glogo.jpg" alt="The Gargoyle Collection" class="banner">
+          <h1>The Gargoyle Collection</h1>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="leftcol">
+          <h2>Menu</h2>
+          <a href="#">Home Page</a>
+          <a href="#">View the catalog</a>
+          <a href="#">About Gargoyles</a>
+          <a href="#">Gargoyle Products</a>
+
+          <h2 style="margin-top:12px">Other Collections</h2>
+          <a href="#">The Victorian Collection</a>
+          <a href="#">The Gothic Series</a>
+        </td>
+
+        <td class="rightcol">
+          <h2>From the President</h2>
+          <table style="width:100%">
+            <tr>
+              <td style="width:96px;padding-right:12px">
+                <img src="images/Oneill.jpg" alt="President" style="width:96px;border-radius:6px">
+              </td>
+              <td class="small">
+                <p><strong>Middle Age Arts</strong> introduces the Gargoyle Collection. We present original reproductions of gargoyles and carved stone figures for decorative and garden use.</p>
+                <ul>
+                  <li>Hand-carved replicas</li>
+                  <li>Indoor & outdoor safe</li>
+                  <li>Custom finishes available</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
+          <h2>Featured Product</h2>
+          <div class="product">
+            <table style="width:100%">
+              <tr>
+                <td style="width:180px;padding-right:12px">
+                  <img src="images/Marble.jpg" alt="Gargoyle Product">
+                </td>
+                <td class="small">
+                  <h3 style="margin:0 0 6px 0">Mini Stone Gargoyle</h3>
+                  <p style="margin:0 0 8px 0">Compact, hand-finished, perfect for shelves and garden nooks.</p>
+                  <p><strong>Price:</strong> $49.99</p>
+                  <a href="#" class="btn">Buy Now</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <h2>What can you do with a gargoyle?</h2>
+          <ul class="small">
+            <li>Enhance garden decor</li>
+            <li>Unique shelf ornament</li>
+            <li>Gift for classic style lovers</li>
+          </ul>
+
+          <h2>Other highlight</h2>
+          <img src="images/Cassini.jpg" alt="Extra gargoyle" style="max-width:200px;border-radius:6px">
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="footer">© The Gargoyle Collection</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
