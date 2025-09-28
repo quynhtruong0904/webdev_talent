@@ -1,13 +1,10 @@
 *{box-sizing:border-box}
-body{ margin:0; font-family: "Segoe UI", Roboto, Arial; background:#f4f6f8; color:#0b1220; }
-.site-header{
-  display:flex; align-items:center; gap:16px; padding:18px; background:#fff; box-shadow:0 6px 16px rgba(2,6,23,.04);
-}
-.site-header img{ width:90px; height:auto; border-radius:6px }
-.site-header h1{ margin:0; font-size:1.15rem; color:#1f3a93 }
+body{ margin:0; font-family:Inter, system-ui, Arial; background:#eef2f6; color:#0b1220; padding:28px; }
+.panel{ max-width:680px; margin:0 auto; background:#fff; padding:18px; border-radius:10px; box-shadow:0 8px 30px rgba(2,6,23,.06) }
+h3{ display:flex; align-items:center; gap:10px; margin:0 0 12px; font-size:1.1rem }
+.icon{ width:32px; height:32px; object-fit:contain }
 
-.content{ max-width:980px; margin:20px auto; padding:18px; background:#fff; border-radius:8px; }
-.content h2{ margin-top:1rem; color:#123; }
-.content ul{ margin:8px 0 16px 18px; }
-.content li{ margin:6px 0; line-height:1.55 }
-.foot{ text-align:right; color:#6b7280; margin-top:12px }
+.topic-list{ list-style:none; padding-left:0; margin:0 }
+.topic-list li{ display:flex; align-items:center; gap:12px; padding:10px 6px; border-bottom:1px solid #f0f3f6 }
+.bullet{ width:22px; height:22px; object-fit:contain }
+.note{ margin-top:12px; color:#6b7280; font-size:.95rem }
