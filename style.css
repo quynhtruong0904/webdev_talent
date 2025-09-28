@@ -1,21 +1,13 @@
 *{box-sizing:border-box}
-body{ margin:0; font-family:Inter, system-ui, Arial; background:#111; color:#fff }
-.hero{
-  height:60vh;
-  background-image:url("images/camel.gif");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
+body{ margin:0; font-family: "Segoe UI", Roboto, Arial; background:#f4f6f8; color:#0b1220; }
+.site-header{
+  display:flex; align-items:center; gap:16px; padding:18px; background:#fff; box-shadow:0 6px 16px rgba(2,6,23,.04);
 }
-.overlay{
-  background:linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
-  padding:2rem;
-  border-radius:12px;
-  text-align:center;
-  max-width:720px;
-}
-.overlay h1{ margin:0 0 .5rem 0; font-size:2rem; letter-spacing:.2px }
-.overlay p{ margin:0; opacity:.9 }
+.site-header img{ width:90px; height:auto; border-radius:6px }
+.site-header h1{ margin:0; font-size:1.15rem; color:#1f3a93 }
+
+.content{ max-width:980px; margin:20px auto; padding:18px; background:#fff; border-radius:8px; }
+.content h2{ margin-top:1rem; color:#123; }
+.content ul{ margin:8px 0 16px 18px; }
+.content li{ margin:6px 0; line-height:1.55 }
+.foot{ text-align:right; color:#6b7280; margin-top:12px }
