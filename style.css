@@ -1,44 +1,21 @@
-:root{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --accent:#2b7cff;
-}
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
-  background:var(--bg);
+body{ margin:0; font-family:Inter, system-ui, Arial; background:#111; color:#fff }
+.hero{
+  height:60vh;
+  background-image:url("images/camel.gif");
+  background-size:cover;
+  background-position:center;
   display:flex;
-  min-height:100vh;
   align-items:center;
   justify-content:center;
+  position:relative;
+}
+.overlay{
+  background:linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
   padding:2rem;
-}
-.card{
-  width:320px;
-  background:var(--card);
   border-radius:12px;
-  box-shadow:0 8px 24px rgba(0,0,0,.08);
-  padding:16px;
   text-align:center;
+  max-width:720px;
 }
-figure{
-  margin:0;
-  overflow:hidden;
-  border-radius:8px;
-  transition:transform .25s ease;
-}
-figure img{
-  display:block;
-  width:100%;
-  height:auto;
-  transform-origin:center;
-  transition:transform .25s ease;
-}
-figure:hover img{ transform:scale(1.06); }
-figcaption{
-  margin-top:8px;
-  font-weight:600;
-  color:var(--accent);
-}
-.desc{ color:#556; font-size:.95rem; margin-top:10px }
+.overlay h1{ margin:0 0 .5rem 0; font-size:2rem; letter-spacing:.2px }
+.overlay p{ margin:0; opacity:.9 }
