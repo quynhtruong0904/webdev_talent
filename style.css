@@ -1,44 +1,17 @@
-*{box-sizing:border-box}
-body { font-family: Arial, sans-serif; padding: 20px; background:#fff; }
-
-.page-title { margin-bottom: 12px; font-size: 24px; }
-
-/* layout: two per row */
-.seasons-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+#customers {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
 }
-
-/* mỗi ô */
-.season {
-  width: 45%;           /* giống yêu cầu */
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+#customers th, #customers td {
+  border: 1px solid #98bf11;
+  padding: 8px;
 }
-
-/* tiêu đề */
-.season-title {
-  margin: 0 0 8px 0;
-  font-size: 18px;
-  text-transform: uppercase;
+#customers th {
+  background-color: #a7c942;
+  color: white;
+  text-align: left;
 }
-
-/* đoạn văn chung (tag p) - style chung theo đề */
-.season-text {
-  margin: 0;
-  line-height: 1.4;
-  font-size: 14px;
-}
-
-/* màu nền cho từng mùa (ID) */
-#spring { background:#ffe6f2; }   /* hồng nhạt */
-#summer { background:#fff1b8; }   /* vàng nhạt */
-#autumn { background:#ffdcb3; }   /* cam nhạt */
-#winter { background:#e6f0ff; }   /* xanh nhạt */
-
-/* responsive: nếu màn nhỏ thì mỗi ô 100% */
-@media (max-width:600px){
-  .season { width: 100%; }
+#customers tr:nth-child(even) {
+  background-color: #eaf2d3;
 }
