@@ -1,43 +1,44 @@
-* {
+*{box-sizing:border-box}
+body { font-family: Arial, sans-serif; padding: 20px; background:#fff; }
+
+.page-title { margin-bottom: 12px; font-size: 24px; }
+
+/* layout: two per row */
+.seasons-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* mỗi ô */
+.season {
+  width: 45%;           /* giống yêu cầu */
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* tiêu đề */
+.season-title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* đoạn văn chung (tag p) - style chung theo đề */
+.season-text {
   margin: 0;
-  padding: 0;
+  line-height: 1.4;
+  font-size: 14px;
 }
-#container {
-  border: 1px solid blue;
-  position: relative;
-  top: 60px;
-  left: 60px;
-  width: 800px;
-  height: 60px;
-}
-#container ul {
-  list-style: none;
-}
-#container ul li {
-  float: left;
-  position: relative;
-}
-#container ul li a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  background: #333;
-  color: white;
-}
-#container ul li a:hover {
-  background: #666;
-}
-/* Submenu */
-#container ul li ul {
-  position: absolute;
-  display: none;
-}
-#container ul li:hover ul {
-  display: block;
-}
-#container ul li ul li a {
-  width: 150px;
-  border: 1px solid green;
-  background: #eee;
-  color: black;
+
+/* màu nền cho từng mùa (ID) */
+#spring { background:#ffe6f2; }   /* hồng nhạt */
+#summer { background:#fff1b8; }   /* vàng nhạt */
+#autumn { background:#ffdcb3; }   /* cam nhạt */
+#winter { background:#e6f0ff; }   /* xanh nhạt */
+
+/* responsive: nếu màn nhỏ thì mỗi ô 100% */
+@media (max-width:600px){
+  .season { width: 100%; }
 }
