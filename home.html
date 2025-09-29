@@ -3,119 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Exercise 37</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Exercise 38 — Four Seasons</title>
+
+  <!-- INTERNAL CSS (the requirement) -->
+  <style>
+    :root{
+      --pad:14px;
+      --muted:#555;
+      --accent:#1b6fb3;
+      --gutter:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Helvetica, Arial, sans-serif;color:#222;background:#fff;padding:20px}
+    .container{max-width:980px;margin:0 auto}
+    header h1{color:var(--accent);margin:0 0 6px 0}
+    header .desc{color:var(--muted); margin-bottom:12px}
+
+    /* Tag style: style một số tag (the requirement) */
+    h2 { font-size:1.2rem; color:#123a5a; margin:0 0 10px }
+    p { margin:0 0 12px; color: #222; line-height:1.45 }    /* paragraph mặc định */
+
+    /* journaling class for h4 (title) */
+    h4.journal {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:1rem;
+      margin:0 0 8px;
+      color:#2c3e50;
+      letter-spacing:0.2px;
+    }
+
+    /* Four seasons grid */
+    .seasons {
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gutter);
+      margin-top:12px;
+    }
+
+    .season {
+      padding:var(--pad);
+      border-radius:8px;
+      min-height:120px;
+      color:#111;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+      border:1px solid rgba(0,0,0,0.06);
+    }
+
+    .season.autumn{ background:#fff4e6; border-left:6px solid #f39c12 }   /* orange */
+    .season.winter{ background:#eef7ff; border-left:6px solid #3498db }   /* blue */
+    .season.spring{ background:#f1fff4; border-left:6px solid #27ae60 }   /* green */
+    .season.summer{ background:#fff7f7; border-left:6px solid #e74c3c }   /* red */
+
+    /* small layout helpers */
+    .meta{font-size:0.95rem;color:var(--muted);margin-top:6px}
+    .instructions { margin-top:16px; padding:12px; background:#fbfdff; border:1px solid #eef6ff; border-radius:8px; color:var(--muted) }
+
+    /* responsive */
+    @media (max-width:600px){
+      .seasons { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <main class="wrap">
+  <div class="container">
     <header>
-      <h1>Exercise 37 — Menu & Data</h1>
-      <p class="lead">Dữ liệu: <a href="data/ex37_data.txt" target="_blank" rel="noopener">ex37/data/ex37_data.txt</a></p>
+      <h1>Exercise 38: Four Seasons</h1>
+      <div class="desc">Design the four-seasons.html page, using internal CSS as required.</div>
     </header>
 
-    <section class="card">
-      <h2>Menu (JavaScript)</h2>
-      <nav id="menuRoot">
-        <!-- menu sẽ được tạo bằng JS -->
-      </nav>
-      <small class="muted">Menu được sinh từ cấu trúc JS tương tự đề bài.</small>
+    <section>
+      <h2>Four Seasons (boxes)</h2>
+      <div class="seasons">
+        <div class="season autumn">
+          <h4 class="journal">AUTUMN</h4>
+          <p>When autumn comes, the gentle warmth of autumn will gradually replace the sweltering summer sun. The coming of autumn is not only a transformation of nature but it also brings with it many changes of the human soul.</p>
+          <div class="meta">A new look — a new emotion and possibly a new beginning.</div>
+        </div>
+
+        <div class="season winter">
+          <h4 class="journal">WINTER</h4>
+          <p>Winter is the season suitable for late love. Season of mistakes and worries. The season when myrtle stands hard in the cold rain but cannot bloom.</p>
+          <div class="meta">Spring begins with the cold to numb from the end of winter.</div>
+        </div>
+
+        <div class="season spring">
+          <h4 class="journal">SPRING</h4>
+          <p>Spring is the season when life returns and flowers awaken. Spring brings the earth back to vivid color and new growth.</p>
+          <div class="meta">A time for renewal and hope.</div>
+        </div>
+
+        <div class="season summer">
+          <h4 class="journal">SUMMER</h4>
+          <p>Summer rain comes and goes suddenly bringing cool air to ease the burning summer sun. Memories flood back; the first rain of the season brings bountiful crops.</p>
+          <div class="meta">Hot days and bright skies.</div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Dữ liệu (hiển thị)</h2>
-      <div class="controls">
-        <button id="loadBtn" class="btn">Hiển thị nội dung data</button>
-        <label><input type="checkbox" id="renderHtml"> Render HTML (KHÔNG AN TOÀN nếu file không tin cậy)</label>
-      </div>
+    <section class="instructions">
+      <h2>Instructions (the requirement)</h2>
+      <p>Create a Tag Style to format some attributes for the p tag (we have p{} above). For example:</p>
+      <pre>
+p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+      </pre>
 
-      <div id="outputWrap">
-        <pre id="output" class="output" aria-live="polite">(Nội dung sẽ hiển thị ở đây)</pre>
-      </div>
+      <p>Create a journaling class for the h4 title (done as <code>h4.journal</code> above).</p>
+
+      <p>Enter data for paragraph 1 normally at the end of the paragraph press Enter to see the result. Similarly enter for the next paragraph.</p>
+
+      <p>If required, you can adapt the background-color or font for each season's box using the classes <code>.autumn</code>, <code>.winter</code>, <code>.spring</code>, <code>.summer</code>.</p>
     </section>
-  </main>
-
-  <script>
-    // --- Menu creation (mô phỏng đề bài: HOME, HTML, CSS (các bài con), JAVASCRIPT, HTML DOM, NGÔN NGỮ ASP) ---
-    (function createMenu() {
-      const menuData = [
-        {text:'HOME', href:'#'},
-        {text:'HTML', href:'#'},
-        {text:'CSS', href:'#', children:[
-          {text:'CSS CĂN BẢN', href:'#'},
-          {text:'GIAO DIỆN VỚI CSS', href:'#'},
-          {text:'CSS NÂNG CAO', href:'#'}
-        ]},
-        {text:'JAVASCRIPT', href:'#', children:[
-          {text:'LESSON 01', href:'#'},
-          {text:'LESSON 02', href:'#'},
-          {text:'LESSON 03', href:'#'}
-        ]},
-        {text:'HTML DOM', href:'#'},
-        {text:'NGÔN NGỮ ASP', href:'#'}
-      ];
-
-      const root = document.getElementById('menuRoot');
-      const ul = document.createElement('ul');
-      ul.className = 'menu';
-      function buildList(items, parentUl) {
-        items.forEach(it => {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          a.href = it.href;
-          a.textContent = it.text;
-          li.appendChild(a);
-          if (it.children) {
-            const sub = document.createElement('ul');
-            sub.className = 'submenu';
-            buildList(it.children, sub);
-            li.appendChild(sub);
-          }
-          parentUl.appendChild(li);
-        });
-      }
-      buildList(menuData, ul);
-      root.appendChild(ul);
-    })();
-
-    // --- Fetch and show data (raw or render) ---
-    (function () {
-      const loadBtn = document.getElementById('loadBtn');
-      const output = document.getElementById('output');
-      const renderCb = document.getElementById('renderHtml');
-
-      loadBtn.addEventListener('click', () => {
-        fetch('data/ex37_data.txt')
-          .then(r => { if(!r.ok) throw new Error(r.status); return r.text(); })
-          .then(txt => {
-            if (renderCb.checked) {
-              // render: replace pre with div to allow HTML rendering
-              const div = document.createElement('div');
-              div.className = 'output';
-              div.innerHTML = txt;
-              output.replaceWith(div);
-              // set reference for future toggles
-              window.__ex37_out = div;
-            } else {
-              // if previously replaced by div, revert to pre
-              if (window.__ex37_out && window.__ex37_out.tagName === 'DIV') {
-                const pre = document.createElement('pre');
-                pre.id = 'output';
-                pre.className = 'output';
-                pre.textContent = txt;
-                window.__ex37_out.replaceWith(pre);
-                window.__ex37_out = null;
-              } else {
-                const el = document.getElementById('output') || output;
-                el.textContent = txt;
-              }
-            }
-          })
-          .catch(e => {
-            const el = document.getElementById('output') || output;
-            el.textContent = 'Lỗi: ' + e.message + '\\nChạy server (python -m http.server) nếu bạn mở bằng file://';
-          });
-      });
-    })();
-  </script>
+  </div>
 </body>
 </html>

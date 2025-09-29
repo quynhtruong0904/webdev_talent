@@ -1,20 +1,172 @@
 :root{
-  --bg:#f7fbff; --card:#fff; --accent:#0b63b6; --muted:#6b7280;
+  --bg: #f6fbff;
+  --card: #ffffff;
+  --accent: #0b66b0;
+  --accent-2: #0b9ad6;
+  --muted: #58606a;
+  --line: #e6eef8;
+  --shadow: rgba(11,102,176,0.06);
 }
+
 *{box-sizing:border-box}
+html,body{height:100%}
 body{
-  margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:#111;
-  padding:20px;
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg),#ffffff 60%);
+  color:#122;
+  -webkit-font-smoothing:antialiased;
+  padding:28px;
 }
-.wrap{max-width:960px;margin:0 auto}
-header h1{color:var(--accent); margin:0 0 6px 0}
-.lead{color:var(--muted); margin:6px 0 12px}
-.card{background:var(--card); padding:14px; border-radius:8px; border:1px solid rgba(0,0,0,0.04); margin-bottom:14px}
-.menu{list-style:none;padding-left:0;margin:8px 0}
-.menu>li{display:block;margin:6px 0}
-.menu a{color:var(--accent); text-decoration:none; font-weight:600}
-.submenu{list-style:disc;margin:6px 0 6px 20px;padding-left:0}
-.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
-.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
-.output{background:#fbfeff;border:1px solid rgba(11,99,182,0.06);padding:12px;border-radius:6px;min-height:120px;white-space:pre-wrap;overflow:auto}
-.muted{color:var(--muted);font-size:0.95rem}
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.top{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+.top h1{
+  margin:0;
+  font-size:1.6rem;
+  color:var(--accent);
+}
+.tag{
+  font-size:0.8rem;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  -webkit-background-clip:text;
+  color:transparent;
+  font-weight:700;
+  margin-left:8px;
+}
+.subtitle{
+  margin:6px 0 0 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+.actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.link-file{
+  text-decoration:none;
+  color:var(--accent);
+  border:1px solid var(--line);
+  padding:8px 10px;
+  border-radius:8px;
+  background:transparent;
+  font-weight:600;
+}
+.btn{
+  border:none;
+  padding:9px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+/* panels */
+.panel{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:16px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* controls */
+.controls{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+.opt{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* raw output */
+.raw h2, .table-wrap h2{margin:0 0 8px 0; color:#223}
+.raw-output{
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  padding:12px;
+  border-radius:8px;
+  max-height:360px;
+  overflow:auto;
+  white-space:pre-wrap;
+  color:#233;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size:0.95rem;
+}
+
+/* table */
+.table-scroll{
+  overflow:auto;
+  border-radius:8px;
+  border:1px solid var(--line);
+}
+.product-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+.product-table thead th{
+  position:sticky;
+  top:0;
+  background: linear-gradient(180deg,#fff,#f7fbff);
+  border-bottom:2px solid var(--line);
+  padding:10px 12px;
+  text-align:left;
+  font-weight:700;
+  color:var(--accent);
+}
+.product-table td{
+  padding:10px 12px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+  color:#222;
+}
+.product-table tbody tr:nth-child(odd){
+  background: #ffffff;
+}
+.product-table tbody tr:nth-child(even){
+  background: #fbfdff;
+}
+.product-table .empty{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+}
+
+/* footer */
+.footer{
+  color:var(--muted);
+  font-size:0.92rem;
+  margin-top:6px;
+}
+
+/* responsive */
+@media (max-width:720px){
+  .top{flex-direction:column; align-items:flex-start;}
+  .actions{width:100%; justify-content:space-between;}
+  .product-table{min-width:520px}
+  .raw-output{max-height:220px}
+}
