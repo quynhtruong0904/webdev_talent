@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exercise 37</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Exercise 37 — Menu & Data</h1>
+      <p class="lead">Dữ liệu: <a href="data/ex37_data.txt" target="_blank" rel="noopener">ex37/data/ex37_data.txt</a></p>
+    </header>
+
+    <section class="card">
+      <h2>Menu (JavaScript)</h2>
+      <nav id="menuRoot">
+        <!-- menu sẽ được tạo bằng JS -->
+      </nav>
+      <small class="muted">Menu được sinh từ cấu trúc JS tương tự đề bài.</small>
+    </section>
+
+    <section class="card">
+      <h2>Dữ liệu (hiển thị)</h2>
+      <div class="controls">
+        <button id="loadBtn" class="btn">Hiển thị nội dung data</button>
+        <label><input type="checkbox" id="renderHtml"> Render HTML (KHÔNG AN TOÀN nếu file không tin cậy)</label>
+      </div>
+
+      <div id="outputWrap">
+        <pre id="output" class="output" aria-live="polite">(Nội dung sẽ hiển thị ở đây)</pre>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // --- Menu creation (mô phỏng đề bài: HOME, HTML, CSS (các bài con), JAVASCRIPT, HTML DOM, NGÔN NGỮ ASP) ---
+    (function createMenu() {
+      const menuData = [
+        {text:'HOME', href:'#'},
+        {text:'HTML', href:'#'},
+        {text:'CSS', href:'#', children:[
+          {text:'CSS CĂN BẢN', href:'#'},
+          {text:'GIAO DIỆN VỚI CSS', href:'#'},
+          {text:'CSS NÂNG CAO', href:'#'}
+        ]},
+        {text:'JAVASCRIPT', href:'#', children:[
+          {text:'LESSON 01', href:'#'},
+          {text:'LESSON 02', href:'#'},
+          {text:'LESSON 03', href:'#'}
+        ]},
+        {text:'HTML DOM', href:'#'},
+        {text:'NGÔN NGỮ ASP', href:'#'}
+      ];
+
+      const root = document.getElementById('menuRoot');
+      const ul = document.createElement('ul');
+      ul.className = 'menu';
+      function buildList(items, parentUl) {
+        items.forEach(it => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = it.href;
+          a.textContent = it.text;
+          li.appendChild(a);
+          if (it.children) {
+            const sub = document.createElement('ul');
+            sub.className = 'submenu';
+            buildList(it.children, sub);
+            li.appendChild(sub);
+          }
+          parentUl.appendChild(li);
+        });
+      }
+      buildList(menuData, ul);
+      root.appendChild(ul);
+    })();
+
+    // --- Fetch and show data (raw or render) ---
+    (function () {
+      const loadBtn = document.getElementById('loadBtn');
+      const output = document.getElementById('output');
+      const renderCb = document.getElementById('renderHtml');
+
+      loadBtn.addEventListener('click', () => {
+        fetch('data/ex37_data.txt')
+          .then(r => { if(!r.ok) throw new Error(r.status); return r.text(); })
+          .then(txt => {
+            if (renderCb.checked) {
+              // render: replace pre with div to allow HTML rendering
+              const div = document.createElement('div');
+              div.className = 'output';
+              div.innerHTML = txt;
+              output.replaceWith(div);
+              // set reference for future toggles
+              window.__ex37_out = div;
+            } else {
+              // if previously replaced by div, revert to pre
+              if (window.__ex37_out && window.__ex37_out.tagName === 'DIV') {
+                const pre = document.createElement('pre');
+                pre.id = 'output';
+                pre.className = 'output';
+                pre.textContent = txt;
+                window.__ex37_out.replaceWith(pre);
+                window.__ex37_out = null;
+              } else {
+                const el = document.getElementById('output') || output;
+                el.textContent = txt;
+              }
+            }
+          })
+          .catch(e => {
+            const el = document.getElementById('output') || output;
+            el.textContent = 'Lỗi: ' + e.message + '\\nChạy server (python -m http.server) nếu bạn mở bằng file://';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
