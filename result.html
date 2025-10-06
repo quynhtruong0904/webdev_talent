@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Product Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f9ff;
+            padding: 20px;
+        }
+
+        .result-box {
+            border: 2px solid #0066cc;
+            background-color: #e6f2ff;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .data {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result-box">
+    <h2>Submitted Data (GET Method)</h2>
+    <div class="data" id="output"></div>
+    <div class="back">
+        <a href="home.html">← Back to Product List</a>
+    </div>
+</div>
+
+<script>
+    // Hiển thị dữ liệu GET lên trang
+    const params = new URLSearchParams(window.location.search);
+    let html = "";
+
+    params.forEach((value, key) => {
+        html += `<b>${key}:</b> ${value}<br>`;
+    });
+
+    document.getElementById("output").innerHTML = html || "No data received.";
+</script>
+
+</body>
+</html>
