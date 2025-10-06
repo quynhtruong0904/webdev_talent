@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> Login - Truong Diem Quynh</title>  
+      <script>
+        function open_itbclub()
+        {
+            //alert("Bạn muốn mở website CLB ITB hả?")
+            window.open("https://itbclub.uel.edu.vn","_blank")
+        
+        }
+      </script>
+    </head>
+    <body>
+        <form name="frm_login"
+              action="processlogin.html"
+              method="submit"
+        >
+            <talbe>
+                <tr>
+                    <td>
+                        <label for "username"> 
+                             User Name:
+                        </label>
+                       </td>
+                    <td>
+                        <input type="next" name="username" id="username"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Password:</td>
+                    <td>
+                        <input type="password" name="matkhau" id="matkhau"/>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="checkbox" name="save" id="save"/> Save login infor
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <button type="login">Login</button>
+                        <button type="reset">Reset</button>
+                        <button type="button" onclick="open_itbclub()">Open ITBClub</button>
+                    </td>
+                </tr>
+            </talbe>
+    </form>      
+    </body>
+</html>
