@@ -1,61 +1,83 @@
 body {
-  color: green;
-  background: white url("images/Apple.jpg") no-repeat fixed center center;
-  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
+.container {
+  width: 650px;
+  margin: 30px auto;
+  border: 1px solid #999;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-address {
-  font-size: 0.9em;
-  font-style: normal;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 15px;
+header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #aaa;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-blockquote {
-  background-color: silver;
-  padding: 10px;
-  border-left: 4px solid #999;
-  margin: 10px 0;
+.logo {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
 }
 
-ul {
-  list-style: circle url("images/Apple.jpg") outside;
-}
-
-ul b {
-  color: rgb(155, 0, 0);
-}
-
-a {
-  font-size: 0.9em;
-  color: green;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  text-transform: uppercase;
+h1 {
+  font-size: 36px;
   font-weight: bold;
+  line-height: 1.1;
+  color: #b59b00;
 }
 
-.special {
-  color: rgb(153, 102, 0);
-  font-weight: bold;
+.master {
+  color: #a67c00;
+  font-size: 18px;
 }
 
-#Article {
-  padding: 0.5em;
-  border-style: solid;
-  border-width: 2px;
-  background-color: rgb(252, 221, 163);
-  width: 250px;
+.tkd {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.main {
+  position: relative;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.sidebar {
   float: right;
-  margin-left: 10px;
+  width: 220px;
+  background-color: #eae38f;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 0 0 10px 20px;
+}
+
+.sidebar ul {
+  list-style-type: square;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
 }
