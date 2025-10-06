@@ -1,76 +1,80 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Contact Result — Exercise 52</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:18px;color:#222}
-    .wrap{max-width:880px;margin:0 auto}
-    h1{font-size:18px;margin-bottom:8px}
-    .box{background:#fafafa;border:1px solid #ddd;padding:14px;border-radius:6px}
-    table{width:100%;border-collapse:collapse;margin-top:8px}
-    th,td{padding:8px;border-bottom:1px solid #eee;text-align:left}
-    .label{width:220px;color:#444;font-weight:700}
-    .raw{margin-top:12px;color:#666;font-size:.9rem;word-break:break-all}
-    .btn-back{display:inline-block;margin-top:12px;padding:8px 12px;background:#1976d2;color:#fff;border-radius:6px;text-decoration:none}
-  </style>
+    <meta charset="UTF-8">
+    <title>Mount Rainier News</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <h1>Contact — Sent data (GET)</h1>
-    <div class="box" id="result">
-      <p>Below are the parameters received by the result page (parsed from the URL query string):</p>
+    <div id="container">
+        <header>
+            <img src="images/Logo.gif" alt="Mount Rainier Logo">
+            <h1>Mount Rainier News</h1>
+            <h3>Our Home Town Weather Forecast</h3>
+        </header>
 
-      <table id="params">
-        <tbody>
-          <!-- rows inserted by JS -->
-        </tbody>
-      </table>
+        <div id="main">
+            <div id="content">
+                <h2>Autumn Folk Festival</h2>
+                <p>
+                    From September 10th - 12th, come to Sunrise for the annual autumn folk festival.
+                    The Sunrise Festival is quickly becoming one of the Northwest's top folk events,
+                    with its intimate performances from world-famous troubadours. Camping spots are
+                    still available at Sunrise campground, but they're going fast.
+                </p>
+                <p>
+                    In addition to the intimate song sharing in the campground every evening during
+                    the festival, there'll be workshops, great food and craft vendors. Call Maria
+                    Thompson at 555-9011 for camping information. Call Ted Cashman (555-8122) to sign
+                    up for one of the workshops.
+                </p>
+                <img src="images/Singers.jpg" alt="Singers" width="250">
+                
+                <h2>Visitors Prepare to Meet MRIM</h2>
+                <img src="images/MRIM.jpg" alt="Mount Rainier Interactive Map" width="250">
+                <p>
+                    Want to see what it's like to hover over Columbia Crest at 14,400 feet, or ski
+                    down the Ingraham Glacier without fear of falling? Then visit MRIM, the Mount
+                    Rainier Interactive Map now available at the Paradise visitors' center.
+                </p>
+                <p>
+                    MRIM uses state-of-the-art computer animation combined with data from geological
+                    satellites to help you explore places you might never visit on foot. The results
+                    of your journey are displayed on a large screen monitor - perfect for group
+                    presentations or individual explorations. Contact Doug LeCourt at Paradise for
+                    more information.
+                </p>
+            </div>
 
-      <div class="raw" id="rawQuery"></div>
+            <aside>
+                <h3>Other Web Pages</h3>
+                <ul>
+                    <li>About Mount Rainier</li>
+                    <li>Mt. Rainier Natn'l Park</li>
+                    <li>Mt. Rainier Associates</li>
+                    <li>Visitor Centers</li>
+                    <li>Campgrounds</li>
+                    <li>Picnic Areas</li>
+                    <li>Food & Lodging</li>
+                    <li>Climbing Information</li>
+                    <li>Winter Recreation</li>
+                    <li>Visiting the Park</li>
+                    <li>Longmire</li>
+                    <li>Paradise</li>
+                    <li>Ohanapecosh</li>
+                    <li>Sunrise</li>
+                    <li>Mowich Lake</li>
+                    <li>Current News</li>
+                    <li>Weather Forecast</li>
+                    <li>Road Conditions</li>
+                    <li>Trail Conditions</li>
+                </ul>
+            </aside>
+        </div>
 
-      <a class="btn-back" href="contact.html">Back to Contact</a>
+        <footer>
+            <p>&copy; Mount Rainier News</p>
+        </footer>
     </div>
-  </div>
-
-  <script>
-    function renderParams() {
-      const params = new URLSearchParams(window.location.search);
-      const tbody = document.querySelector('#params tbody');
-      tbody.innerHTML = '';
-
-      if (!Array.from(params.keys()).length) {
-        tbody.innerHTML = '<tr><td class="label">No data</td><td>Không có tham số (form chưa gửi)</td></tr>';
-      } else {
-        // We want to show all keys (support multi-values too)
-        const seen = new Set();
-        for (const [key, value] of params.entries()) {
-          if (seen.has(key)) {
-            // append to existing cell if multiple values for same key
-            const existing = document.querySelector('#params tbody tr[data-key="'+key+'"] td.value');
-            if (existing) existing.textContent += ', ' + value;
-          } else {
-            seen.add(key);
-            const tr = document.createElement('tr');
-            tr.setAttribute('data-key', key);
-            const th = document.createElement('td');
-            th.className = 'label';
-            th.textContent = key;
-            const td = document.createElement('td');
-            td.className = 'value';
-            td.textContent = value;
-            tr.appendChild(th);
-            tr.appendChild(td);
-            tbody.appendChild(tr);
-          }
-        }
-      }
-
-      document.getElementById('rawQuery').textContent = 'Raw query string: ' + (window.location.search || '(empty)');
-    }
-
-    renderParams();
-  </script>
 </body>
 </html>
