@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 51 - Registration</title>
+    <style>
+        body {
+            background-color: #009999;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 30px auto;
+            background-color: #007f80;
+            padding: 20px 40px 40px 40px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: orange;
+            padding: 10px;
+            color: darkred;
+            font-weight: bold;
+            font-size: 22px;
+            border-bottom: 3px solid darkred;
+        }
+
+        .header img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 26px;
+            color: white;
+        }
+
+        form {
+            margin-top: 20px;
+            color: white;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-top: 8px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            width: 180px;
+            padding: 4px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .fullname input {
+            width: 150px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttons input {
+            padding: 6px 14px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px;
+            background-color: white;
+            color: #007f80;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .buttons input:hover {
+            background-color: #eee;
+        }
+
+        select {
+            width: 220px;
+            padding: 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/Logo.gif" alt="Logo" width="40" height="40">
+            St. Mary’s of Northland Pines <br>
+            <span style="font-size:14px; color:#fff8e1;">Research Hospital and Clinics</span>
+        </div>
+
+        <h2>Newborn Registration</h2>
+
+        <form>
+            <label>Date:</label>
+            <input type="date"><br>
+
+            <label>Infant’s first name:</label>
+            <input type="text">
+            <label>Last:</label>
+            <input type="text"><br>
+
+            <label>Medical Record #:</label>
+            <input type="text"><br>
+
+            <label>Date of birth:</label>
+            <input type="date"><br>
+
+            <label>Birth weight:</label>
+            <input type="number" step="0.01"> kg<br>
+
+            <label>APGAR score:</label>
+            <input type="number" min="0" max="10"><br>
+
+            <label>Mother’s first name:</label>
+            <input type="text">
+            <label>Last:</label>
+            <input type="text"><br>
+
+            <label>Father’s first name:</label>
+            <input type="text">
+            <label>Last:</label>
+            <input type="text"><br>
+
+            <label>Physician (check all that apply):</label><br>
+            <select multiple size="3">
+                <option>Dr. Warren Albert</option>
+                <option>Dr. Maria Alvarez</option>
+                <option>Dr. Karen Brinkman</option>
+                <option>Dr. Michael Kenny</option>
+            </select><br>
+
+            <div class="buttons">
+                <input type="submit" value="Register">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
