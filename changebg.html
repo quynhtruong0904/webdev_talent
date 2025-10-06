@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Change Background - Truong Diem Quynh</title>
+        <script>
+            function change_background(value)
+            {
+                mydiv=document.getElementById("mydiv")
+                mydiv.setAttribute("style","width: 100%, height: 100px; background-color:"+value)
+
+            }
+        </script>
+    </head>
+    <body>
+        <h3> Change background color:</h3>
+        <select id="mybackground" name="mybackground" onchange="change_background()">
+            <option value="blue">Màu xanh da trời</option>
+            <option value="red">Màu đỏ chóe</option>
+            <option value="yellow">Màu vàng khè</option>
+        </select>
+        <div style="width: 100%;height: 100px;background-color:pink";id="myid"></div>
+    </body>
+</html>
