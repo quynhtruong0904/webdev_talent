@@ -1,55 +1,38 @@
-function enterData() {
-  let text = document.getElementById("inputText").value;
-  document.getElementById("resultText").value = text;
-  document.getElementById("info").innerText = "";
+function getValues() {
+  let a = parseFloat(document.getElementById("a").value);
+  let b = parseFloat(document.getElementById("b").value);
+  let c = parseFloat(document.getElementById("c").value);
+  return { a, b, c };
 }
 
-function showUppercase() {
-  let text = document.getElementById("inputText").value;
-  document.getElementById("resultText").value = text.toUpperCase();
+function findMax() {
+  let { a, b, c } = getValues();
+  let maxValue = Math.max(a, b, c);
+  document.getElementById("result").value = maxValue;
 }
 
-function showLowercase() {
-  let text = document.getElementById("inputText").value;
-  document.getElementById("resultText").value = text.toLowerCase();
+function findMin() {
+  let { a, b, c } = getValues();
+  let minValue = Math.min(a, b, c);
+  document.getElementById("result").value = minValue;
 }
 
-function oneWordPerLine() {
-  let text = document.getElementById("inputText").value.trim();
-  let words = text.split(/\s+/);
-  document.getElementById("resultText").value = words.join("\n");
+function sinA() {
+  let { a } = getValues();
+  let rad = a * Math.PI / 180;  // đổi từ độ sang radian
+  let result = Math.sin(rad);
+  document.getElementById("result").value = result;
 }
 
-function countWords() {
-  let text = document.getElementById("inputText").value.trim();
-  if (text === "") {
-    document.getElementById("info").innerText = "Word count: 0";
-    return;
-  }
-  let words = text.split(/\s+/);
-  document.getElementById("info").innerText = "Word count: " + words.length;
+function cosA() {
+  let { a } = getValues();
+  let rad = a * Math.PI / 180;
+  let result = Math.cos(rad);
+  document.getElementById("result").value = result;
 }
 
-function countUppercase() {
-  let text = document.getElementById("inputText").value;
-  let matches = text.match(/[A-Z]/g);
-  let count = matches ? matches.length : 0;
-  document.getElementById("info").innerText = "Uppercase letters: " + count;
-}
-
-function countLowercase() {
-  let text = document.getElementById("inputText").value;
-  let matches = text.match(/[a-z]/g);
-  let count = matches ? matches.length : 0;
-  document.getElementById("info").innerText = "Lowercase letters: " + count;
-}
-
-function showVowelsConsonants() {
-  let text = document.getElementById("inputText").value;
-  let vowels = text.match(/[aeiouAEIOU]/g);
-  let consonants = text.match(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g);
-  let vowelCount = vowels ? vowels.length : 0;
-  let consonantCount = consonants ? consonants.length : 0;
-  document.getElementById("info").innerText =
-    "Vowels: " + vowelCount + " | Consonants: " + consonantCount;
+function multiplyAB() {
+  let { a, b } = getValues();
+  let result = a * b;
+  document.getElementById("result").value = result;
 }
