@@ -14,7 +14,7 @@ table {
   border-collapse: collapse;
 }
 
-textarea {
+input {
   width: 100%;
   box-sizing: border-box;
 }

@@ -2,45 +2,45 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Exercise 56: String Processing</title>
+  <title>Exercise 54: Math Function</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-<h2>Using String Processing functions</h2>
+<h2>Exercise 54: Math Function</h2>
 
 <table border="1" cellpadding="5">
   <tr>
-    <th>Input Data:</th>
-    <th>Result:</th>
+    <td>a:</td>
+    <td><input type="number" id="a" value="30"></td>
   </tr>
   <tr>
-    <td>
-      <textarea id="inputText" rows="8" cols="40"></textarea>
-    </td>
-    <td>
-      <textarea id="resultText" rows="8" cols="40" readonly></textarea>
-    </td>
+    <td>b:</td>
+    <td><input type="number" id="b" value="45"></td>
+  </tr>
+  <tr>
+    <td>c:</td>
+    <td><input type="number" id="c" value="90"></td>
+  </tr>
+  <tr>
+    <td>Result:</td>
+    <td><input type="text" id="result" readonly></td>
   </tr>
 </table>
 
 <br>
 
-<!-- Các nút xử lý -->
-<button onclick="enterData()">Enter Data</button>
-<button onclick="showUppercase()">Uppercase display</button>
-<button onclick="showLowercase()">Lowercase display</button>
-<button onclick="oneWordPerLine()">Output one word per line</button>
-<button onclick="countWords()">Word count</button>
-<button onclick="countUppercase()">Count uppercase</button>
-<button onclick="countLowercase()">Count lowercase</button>
-<button onclick="showVowelsConsonants()">Print vowels, consonants</button>
+<button onclick="findMax()">MAX</button>
+<button onclick="findMin()">MIN</button>
+<button onclick="sinA()">sin(a)</button>
+<button onclick="cosA()">cos(a)</button>
+<button onclick="multiplyAB()">a * b</button>
 
 <p id="info"></p>
 
 <hr>
-<p>W3C's String Processing Website</p>
+<p>W3C's Math Function Example</p>
 
 </body>
 </html>
