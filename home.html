@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 55: The quadratic equation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<h2>The quadratic equation</h2>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <td>a:</td>
+    <td><input type="number" id="a" value="1"></td>
+  </tr>
+  <tr>
+    <td>b:</td>
+    <td><input type="number" id="b" value="3"></td>
+  </tr>
+  <tr>
+    <td>c:</td>
+    <td><input type="number" id="c" value="-4"></td>
+  </tr>
+  <tr>
+    <td>Result:</td>
+    <td><input type="text" id="result" readonly></td>
+  </tr>
+</table>
+
+<br>
+
+<button onclick="solveEquation()">Find solution</button>
+<button onclick="clearForm()">Clear</button>
+
+<p id="info"></p>
+
+<hr>
+<p>W3C's Quadratic Equation Example</p>
+
+</body>
+</html>
