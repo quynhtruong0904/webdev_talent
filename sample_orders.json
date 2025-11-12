@@ -1,0 +1,12 @@
+[
+  { "date": "2025-10-01", "sales": 220, "customer": "C001" },
+  { "date": "2025-10-02", "sales": 185, "customer": "C002" },
+  { "date": "2025-10-03", "sales": 190, "customer": "C001" },
+  { "date": "2025-10-04", "sales": 250, "customer": "C003" },
+  { "date": "2025-10-05", "sales": 170, "customer": "C004" },
+  { "date": "2025-10-06", "sales": 260, "customer": "C002" },
+  { "date": "2025-10-07", "sales": 150, "customer": "C005" },
+  { "date": "2025-10-08", "sales": 180, "customer": "C001" },
+  { "date": "2025-10-09", "sales": 240, "customer": "C003" },
+  { "date": "2025-10-10", "sales": 300, "customer": "C004" }
+]

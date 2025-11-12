@@ -1,0 +1,10 @@
+{
+  "lastUpdated": "2025-11-07",
+  "method": "Moving Average",
+  "window": 3,
+  "forecast": [220, 185, 190, 250, 170, 260, 150, 180, 240, 300],
+  "accuracy": {
+    "mape": 8.3,
+    "rmse": 12.6
+  }
+}

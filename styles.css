@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f5f9;
+}
+
+header {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+nav button {
+  margin: 8px;
+  padding: 8px 16px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #0066cc;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+#data {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+footer {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+#data {
+  transition: all 0.4s ease-in-out;
+}
