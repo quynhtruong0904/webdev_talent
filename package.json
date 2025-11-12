@@ -1,0 +1,16 @@
+{
+  "name": "business-ai-saas",
+  "version": "1.0.0",
+  "description": "AI-driven demand forecasting and customer analytics SaaS for SMEs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Your Name - University of Economics and Law",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  }
+}

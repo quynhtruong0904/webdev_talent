@@ -1,0 +1,7 @@
+[
+  { "id": "C001", "name": "Anna Nguyen", "email": "anna@example.com", "country": "Vietnam" },
+  { "id": "C002", "name": "David Tran", "email": "david@example.com", "country": "Vietnam" },
+  { "id": "C003", "name": "Mika Tan", "email": "mika@example.com", "country": "Singapore" },
+  { "id": "C004", "name": "Lisa Wong", "email": "lisa@example.com", "country": "Malaysia" },
+  { "id": "C005", "name": "James Lee", "email": "james@example.com", "country": "Thailand" }
+]

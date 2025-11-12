@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SME Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AI-Driven SME Analytics</h1>
+    <nav>
+        <button onclick="loadForecast()">Forecast</button>
+        <button onclick="loadRFM()">RFM Segmentation</button>
+        <button onclick="loadPromotions()">Promotions</button>
+        <button onclick="loadCare()">Customer Care</button>
+        <button onclick="loadSummary()">AI Summary</button>
+        <button onclick="loadAbout()">About Me</button>
+
+    </nav>
+    
+        
+
+  
+
+  </header>
+
+  <main>
+    <section id="output">
+      <canvas id="chart"></canvas>
+      <div id="data"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 University of Economics and Law | Business Web Development Project</p>
+  </footer>
+
+  <script src="main.js"></script>
+  
+</body>
+</html>
